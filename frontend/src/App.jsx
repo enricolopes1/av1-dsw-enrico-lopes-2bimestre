@@ -37,10 +37,10 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-8">
       <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow">
 
-        <h1 className="text-3xl font-bold mb-6">
+        <h1 className="text-6xl text-red-500 font-bold mb-6">
           Sistema de Tarefas
         </h1>
 
@@ -65,7 +65,7 @@ function App() {
           />
 
           <button
-            className="bg-blue-500 text-white p-3 rounded"
+            className="bg-blue-500 hover:bg-blue-600 transition text-white p-3 rounded font-semibold"
           >
             Criar tarefa
           </button>
@@ -89,7 +89,7 @@ function App() {
 
               <button
                 onClick={() => deletarTarefa(tarefa.id)}
-                className="bg-red-500 text-white px-4 py-2 rounded"
+                className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded"
               >
                 Excluir
               </button>
