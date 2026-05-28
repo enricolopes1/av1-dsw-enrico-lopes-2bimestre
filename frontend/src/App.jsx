@@ -38,9 +38,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-8">
-      <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow">
+      <div className="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow-2xl">
 
-        <h1 className="text-6xl text-red-500 font-bold mb-6">
+        <h1 className="text-4xl text-center font-bold mb-6 text-blue-700">
           Sistema de Tarefas
         </h1>
 
@@ -53,7 +53,7 @@ function App() {
             placeholder="Título"
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
-            className="border p-3 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <input
@@ -61,11 +61,11 @@ function App() {
             placeholder="Descrição"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
-            className="border p-3 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <button
-            className="bg-blue-500 hover:bg-blue-600 transition text-white p-3 rounded font-semibold"
+            className="bg-blue-500 hover:bg-blue-600 transition text-white p-3 rounded-lg font-semibold"
           >
             Criar tarefa
           </button>
@@ -75,7 +75,7 @@ function App() {
           {tarefas.map((tarefa) => (
             <div
               key={tarefa.id}
-              className="border p-4 rounded flex justify-between items-center"
+              className="bg-gray-50 border border-gray-200 p-4 rounded-xl flex justify-between items-center shadow"
             >
               <div>
                 <h2 className="font-bold">
@@ -89,7 +89,7 @@ function App() {
 
               <button
                 onClick={() => deletarTarefa(tarefa.id)}
-                className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded"
+                className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded-lg"
               >
                 Excluir
               </button>
